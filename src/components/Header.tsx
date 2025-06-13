@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Database, Users, Building2, Network } from "lucide-react";
+import { Database, Users, Building2, Network, Calendar, QrCode } from "lucide-react";
 
 const Header = () => {
   return (
@@ -22,11 +22,23 @@ const Header = () => {
             </a>
             <a href="#profiles" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
               <Users className="h-4 w-4" />
-              <span>Personal</span>
+              <span>Profiles</span>
             </a>
             <a href="#companies" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
               <Building2 className="h-4 w-4" />
               <span>Companies</span>
+            </a>
+            <a href="#events" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
+              <Calendar className="h-4 w-4" />
+              <span>Events</span>
+            </a>
+            <a href="#chapters" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
+              <Building2 className="h-4 w-4" />
+              <span>Chapters</span>
+            </a>
+            <a href="#digital-cards" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
+              <QrCode className="h-4 w-4" />
+              <span>Digital Cards</span>
             </a>
             <a href="#network" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
               <Network className="h-4 w-4" />

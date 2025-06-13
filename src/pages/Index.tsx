@@ -4,6 +4,9 @@ import Hero from "@/components/Hero";
 import DatabaseSection from "@/components/DatabaseSection";
 import ProfilesSection from "@/components/ProfilesSection";
 import CompaniesSection from "@/components/CompaniesSection";
+import EventsSection from "@/components/EventsSection";
+import ChaptersSection from "@/components/ChaptersSection";
+import DigitalCardSection from "@/components/DigitalCardSection";
 import NetworkSection from "@/components/NetworkSection";
 import Footer from "@/components/Footer";
 
@@ -15,6 +18,9 @@ const Index = () => {
       <DatabaseSection />
       <ProfilesSection />
       <CompaniesSection />
+      <EventsSection />
+      <ChaptersSection />
+      <DigitalCardSection />
       <NetworkSection />
       <Footer />
     </div>
