@@ -7,6 +7,7 @@ import CompaniesSection from "@/components/CompaniesSection";
 import EventsSection from "@/components/EventsSection";
 import ChaptersSection from "@/components/ChaptersSection";
 import DigitalCardSection from "@/components/DigitalCardSection";
+import ChapterDashboard from "@/components/ChapterDashboard";
 import NetworkSection from "@/components/NetworkSection";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ const Index = () => {
       <EventsSection />
       <ChaptersSection />
       <DigitalCardSection />
+      <ChapterDashboard />
       <NetworkSection />
       <Footer />
     </div>
