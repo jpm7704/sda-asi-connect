@@ -3,15 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { QrCode, Scan, Share, Camera } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import QRCode from 'qrcode';
+import * as QRCode from 'qrcode';
 
 const DigitalCardSection = () => {
   const [showScanner, setShowScanner] = useState(false);
   const [qrCodeUrl, setQrCodeUrl] = useState<string>('');
   const { toast } = useToast();
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   // Sample contact data - in real app this would come from user profile
   const contactData = {
