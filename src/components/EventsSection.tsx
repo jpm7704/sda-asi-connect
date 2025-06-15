@@ -1,27 +1,9 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, MapPin } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Calendar } from "lucide-react";
 
 const EventsSection = () => {
-  const events = [
-    {
-      title: "ASI Annual Convention",
-      date: "July 15-18, 2024",
-      location: "Orlando, Florida"
-    },
-    {
-      title: "Local ASI Meeting",
-      date: "March 22, 2024",
-      location: "Seattle, Washington"
-    },
-    {
-      title: "Business Workshop",
-      date: "May 10, 2024",
-      location: "Atlanta, Georgia"
-    }
-  ];
-
   return (
     <section id="events" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -34,30 +16,16 @@ const EventsSection = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="grid gap-6">
-            {events.map((event, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-                      <div className="flex items-center space-x-4 text-muted-foreground">
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="h-4 w-4" />
-                          <span>{event.date}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <MapPin className="h-4 w-4" />
-                          <span>{event.location}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <Button>Register</Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Card>
+            <CardContent className="p-12 text-center">
+              <Calendar className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">No Events Available</h3>
+              <p className="text-muted-foreground mb-4">
+                There are currently no upcoming events. Check back soon!
+              </p>
+              <Button>Create Event</Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

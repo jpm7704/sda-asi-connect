@@ -9,7 +9,137 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      personal_profiles: {
+        Row: {
+          asi_involvement: string[] | null
+          available_for_mentoring: boolean | null
+          bio: string | null
+          church_positions: string[] | null
+          created_at: string
+          current_company: string | null
+          experience_years: number | null
+          id: string
+          interests: string[] | null
+          linkedin_url: string | null
+          location_city: string | null
+          location_country: string | null
+          location_state: string | null
+          ministry_interests: string[] | null
+          profession: string | null
+          profile_image_url: string | null
+          profile_visibility: string
+          seeking_mentorship: boolean | null
+          skills: string[] | null
+          updated_at: string
+          user_id: string
+          website_url: string | null
+        }
+        Insert: {
+          asi_involvement?: string[] | null
+          available_for_mentoring?: boolean | null
+          bio?: string | null
+          church_positions?: string[] | null
+          created_at?: string
+          current_company?: string | null
+          experience_years?: number | null
+          id?: string
+          interests?: string[] | null
+          linkedin_url?: string | null
+          location_city?: string | null
+          location_country?: string | null
+          location_state?: string | null
+          ministry_interests?: string[] | null
+          profession?: string | null
+          profile_image_url?: string | null
+          profile_visibility?: string
+          seeking_mentorship?: boolean | null
+          skills?: string[] | null
+          updated_at?: string
+          user_id: string
+          website_url?: string | null
+        }
+        Update: {
+          asi_involvement?: string[] | null
+          available_for_mentoring?: boolean | null
+          bio?: string | null
+          church_positions?: string[] | null
+          created_at?: string
+          current_company?: string | null
+          experience_years?: number | null
+          id?: string
+          interests?: string[] | null
+          linkedin_url?: string | null
+          location_city?: string | null
+          location_country?: string | null
+          location_state?: string | null
+          ministry_interests?: string[] | null
+          profession?: string | null
+          profile_image_url?: string | null
+          profile_visibility?: string
+          seeking_mentorship?: boolean | null
+          skills?: string[] | null
+          updated_at?: string
+          user_id?: string
+          website_url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "personal_profiles_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      users: {
+        Row: {
+          account_type: string
+          church_affiliation: string | null
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          is_active: boolean
+          last_login: string | null
+          last_name: string
+          phone: string | null
+          sda_membership_status: string | null
+          updated_at: string
+          verification_status: string
+        }
+        Insert: {
+          account_type?: string
+          church_affiliation?: string | null
+          created_at?: string
+          email: string
+          first_name: string
+          id: string
+          is_active?: boolean
+          last_login?: string | null
+          last_name: string
+          phone?: string | null
+          sda_membership_status?: string | null
+          updated_at?: string
+          verification_status?: string
+        }
+        Update: {
+          account_type?: string
+          church_affiliation?: string | null
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          is_active?: boolean
+          last_login?: string | null
+          last_name?: string
+          phone?: string | null
+          sda_membership_status?: string | null
+          updated_at?: string
+          verification_status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

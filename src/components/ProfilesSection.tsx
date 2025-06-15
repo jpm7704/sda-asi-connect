@@ -35,25 +35,12 @@ const ProfilesSection = () => {
             <CardHeader>
               <CardTitle>Recent Members</CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {[
-                  { name: "John Smith", business: "Smith Construction", industry: "Construction" },
-                  { name: "Mary Johnson", business: "Johnson Health Clinic", industry: "Healthcare" },
-                  { name: "David Lee", business: "Lee Accounting", industry: "Professional Services" }
-                ].map((member, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 border rounded-lg">
-                    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                      <User className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-medium">{member.name}</p>
-                      <p className="text-sm text-muted-foreground">{member.business}</p>
-                      <p className="text-xs text-muted-foreground">{member.industry}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <CardContent className="p-12 text-center">
+              <User className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">No Members Yet</h3>
+              <p className="text-muted-foreground">
+                Be the first to create your member profile!
+              </p>
             </CardContent>
           </Card>
         </div>
