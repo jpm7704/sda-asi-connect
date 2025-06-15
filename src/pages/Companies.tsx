@@ -1,16 +1,16 @@
 
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import CompaniesSection from "@/components/CompaniesSection";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const Companies = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <Hero />
+      <CompaniesSection />
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Companies;

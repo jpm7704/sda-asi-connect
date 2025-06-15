@@ -1,16 +1,16 @@
 
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import NetworkSection from "@/components/NetworkSection";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const Network = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <Hero />
+      <NetworkSection />
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Network;
